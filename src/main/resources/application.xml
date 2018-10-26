@@ -8,7 +8,7 @@
 
     <bean class="spring.mybatis.JDBCUtils" id="dataSource">
         <property name="user" value="root"></property>
-        <property name="password" value="qinliang"></property>
+        <property name="password" value="root"></property>
         <property name="driver" value="com.mysql.jdbc.Driver"></property>
         <property name="url" value="jdbc:mysql://localhost:3306/test"></property>
     </bean>
