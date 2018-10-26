@@ -12,7 +12,8 @@
     <servlet-name>spring</servlet-name>
     <url-pattern>/*</url-pattern>
   </servlet-mapping>
-  
+```
+
 `MyDispatchServlet`在实例化的时候会初始化`InitBean`,`InitBean`在构造函数中初始化加载`application.xml`里面的属性，实例化其中的`bean`属性，根据`component-scan`属性
 可以获得需要扫描的包名，然后扫描对应的包，将其中带有`MyComponent`，`MyController`，`MyRepository`，`MyService`注解的类实例化，注入`beanContainerMap`中，key为
 类名和接口，value为对应的对象，然后扫描整个项目，找到带有`MyAutowired`注解的`Field`，注入对应的对象。扫描到的Controller，将其添加到`handlerMapping`中
